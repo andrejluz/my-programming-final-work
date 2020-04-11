@@ -1,0 +1,67 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <!-- CONTENT POST -->
+
+            <div class="col-xs-12 col-md-8">
+
+                <?php if (isset($_SESSION['admin'])) : ?>
+                <div style="margin-top: 10px;">
+                    <p>Admin Page Links: |
+                        <a href="?page=admin/addpost" class="" >Add Post</a> |
+                        <a href="?page=logout">Atsijungti</a></p>
+                    </div>
+                <?php endif; ?>
+
+              <?php foreach ($posts as $post) : ?>
+                    <div class="panel panel-default panelSpace">
+                        <h3><a href="?page=postview&id=<?=$post['id']?>"><?= $post['postTitle'] ?></a></h3>
+                        <h5>Kategorija: <?= $post['postCategory'] ?></h5>
+                        <p><?= postCut($post['postMessage']) ?></p>
+                        <p><a href="?page=postview&id=<?=$post['id']?>">Skaityti daugiau</a></p>
+                        <?php if (isset($_SESSION['admin'])) : ?>
+                            <p><h6>Admin Page Links: |
+                                <a href="?page=admin/updateposts&id=<?= $post['id']?>" class="" >Redaguoti</a> |
+                                <a href="?page=admin/addpost" class="" >Add Post</a> |
+                                <a href="?page=admin/deleteposts&id=<?= $post['id']?>">Trinti</a> |
+                                <a href="?page=logout">Atsijungti</a></h6></p>
+                        <?php endif; ?>
+                    </div>
+                    <?php endforeach; ?>
+
+
+                <nav aria-label="Page navigation" class="text-center">
+
+                    <ul class="pagination pageNavStyle">
+
+                        <li>
+                            <?php if ($page >1) :?>
+                            <a href="?page=home&p=<?= ($page-1)?>" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                            <?php endif; ?>
+                        </li>
+                        <?php for($i = 1; $i <= $pages; $i++) : ?>
+                            <li><a href="?page=home&p=<?= $i ?>"><?= $i ?></a></li>
+                        <?php endfor; ?>
+                        <li>
+                            <?php if ($page != $pages) : ?>
+                            <a href="?page=home&p=<?= $page+ 1?>" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                            <?php endif; ?>
+                        </li>
+
+                    </ul>
+                </nav>
+
+
+            </div>
+
+          <?php include(__DIR__ . '/../../page/rightSidebar.php');?>
+        </div>
+
+        <!-- END CONTENT POST -->
+    </div>
+
+</main>

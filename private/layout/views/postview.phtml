@@ -1,0 +1,39 @@
+<!-- Posto atvaizdavimas pagal id skaityti toliau -->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+            <!-- ADMIN LINKS -->
+            <?php if (isset($_SESSION['admin'])) : ?>
+                <div style="margin-top: 10px;">
+                    <p>Admin Page Links: |
+                        <a href="?page=admin/addpost" class="" >Add Post</a> |
+                        <a href="?page=logout">Atsijungti</a></p>
+                </div>
+            <?php endif; ?>
+            <!-- END ADMIN LINKS -->
+
+                <div class="panel panel-default panelSpace">
+                    <h3><?= $posts['postTitle'] ?></h3>
+                    <h5>Kategorija: <?= $posts['postCategory'] ?></h5>
+                    <p><?= $posts['postMessage'] ?></p>
+                    <a href="?page=home">Grižti į pradžia</a>
+
+
+             <!-- ADMIN LINKS -->
+                    <?php if (isset($_SESSION['admin'])) : ?>
+                        <p><h6>Admin Page Links: |
+                            <a href="?page=admin/updateposts&id=<?= $posts['id']?>" class="" >Redaguoti</a> |
+                            <a href="?page=admin/addpost" class="" >Add Post</a> |
+                            <a href="?page=admin/deleteposts&id=<?= $posts['id']?>">Trinti</a> |
+                            <a href="?page=logout">Atsijungti</a></h6></p>
+                    <?php endif; ?>
+            <!-- END ADMIN LINKS -->
+          </div>
+
+        </div>
+
+        </div>
+    </div>
+
+</div>
+

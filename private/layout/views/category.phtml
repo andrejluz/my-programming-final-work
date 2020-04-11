@@ -1,0 +1,28 @@
+<div class="col-xs-6 col-md-4 sidebarRight text-center">
+    <div class=" panel panel-default listPanel">
+        <h3>Kategorijos</h3>
+        <ul class="list-group">
+
+            <?php foreach ($posts as $post) : ?>
+
+                <li class="list-group-item"><a href="?page=categoryposts&postCategory=<?=$post['postCategory']?>" > <?= $post['postCategory'] ?> </a></li>
+
+            <?php endforeach; ?>
+
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

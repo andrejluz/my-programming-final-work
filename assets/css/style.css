@@ -1,0 +1,187 @@
+*
+{
+    margin: 0;
+}
+
+body
+{
+    margin:0;
+    background-color: #dee2e3;
+}
+.carousel
+{
+    margin-top:55px;
+}
+.navbar
+{
+    border-radius: 0;
+    margin-bottom:2px;
+
+}
+
+.form-inline
+{
+    margin-top:0.5%;
+
+}
+
+.clearfix
+{
+    clear:both;
+}
+.formTextColor
+{
+    color:white;
+}
+
+
+.imgSize
+{
+    width:100%;
+}
+
+.footerStyle
+{
+    height: 200px;
+    width: 100%;
+    background-color: #191919;
+    color:white;
+}
+
+.contentPost
+{
+    border-bottom:1px solid ;
+    margin-bottom: 50px;
+}
+
+.upDownSpace
+{
+    margin-top:50px;
+    margin-bottom:50px;
+
+}
+
+.adminHeader
+{
+    width: 100%;
+    height: 150px;
+    background-color: #191919;
+}
+
+.list
+{
+    background-color: #191919;
+    font-family: "Calibri Light";
+
+
+}
+.list-group-item
+{
+
+    border-radius:15px;
+    background-color: #191919;
+}
+
+.list-group-item  a{
+
+    font-family: "Calibri Light";
+    font-size: 17px;
+}
+
+
+.listPanel
+{
+    margin-top:20px;
+    background-color: #191919;
+    color:white;
+    font-family: "Calibri Light";
+    border-radius:15px;
+
+}
+.panelSpace
+{
+
+    padding-left:20px;
+    background-color: #191919;
+    color:white;
+    font-family: "Calibri Light";
+    border-radius:15px;
+    padding-bottom: 40px;
+    padding-top:10px;
+
+}
+
+div .panelSpace
+{
+    margin-top:20px;
+
+}
+
+h5
+{
+    color:#808080;
+}
+
+.footerMeniu >li
+{
+
+    margin-bottom: 25px;
+}
+
+.socialButtonSpace
+{
+    margin-top:50px;
+
+}
+.socialButtonSpace > button
+{
+    margin-right:20px;
+
+}
+
+.btn-fb
+{   color:white;
+    background-color: #2e6da4;
+}
+
+.btn-tw
+{
+    color:white;
+    background-color: #1E90FF;
+}
+
+.btn-gplus
+{
+    color:white;
+    background-color: #FA8072;
+}
+
+.btn-li
+{
+    color: white;
+    background-color: #4682B4;
+}
+
+.btn-ins {
+
+    color: white;
+    background-color: #4169E1;
+}
+
+.pageNavStyle li a
+{
+    border-radius: 5px;
+    background-color: #191919;
+
+}
+.pageNavStyle li a:hover
+{
+    background-color: #C0C0C0;
+
+}
+
+
+h6 a
+{
+    font-size: 15px;
+}

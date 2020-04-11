@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-8">
+                <div class="panel panel-default panelSpace">
+                    <h3><a href="?page=postview&id=<?=$posts['id']?>"><?= $posts['postTitle'] ?></a></h3>
+                    <h5>Kategorija: <?= $posts['postCategory'] ?></h5>
+                    <p><?= postCut($posts['postMessage']) ?></p>
+                    <p><a href="?page=postview&id=<?=$posts['id']?>">Skaityti daugiau</a></p>
+                </div>
+        </div>
+
+    </div>
+</div>
+
